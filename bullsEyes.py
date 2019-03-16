@@ -6,8 +6,25 @@ def draw_ci (cX, cY, radius, color, win):
     circle.setFill(color)
     circle.draw(win)
 
-rngCol1 = input("what color do u want")
-rngCol2 = input("what color do u want")
+
+ans1 = False
+ans2 = False
+
+while ans1 == False:
+    try:
+        rngCol1 = input("what color do you want for the first part of ring? answer in red, green, blue, ect ")
+        ans1 = True
+    except ValueError:
+        print ("Value Error try again use the example")
+
+
+        
+while ans2 == False:
+    try:
+        rngCol2 = input("what color do you want for the second part of ring? answer in red, green, blue, ect ")
+        ans2 = True
+    except ValueError:
+        print ("Value Error try again use the example")
 
 bullWin = GraphWin("bullsEyes.py", 500, 500)
 bullWin.setCoords(0, 0, 500, 500)
