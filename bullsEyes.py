@@ -1,10 +1,13 @@
 from graphics import *
 from random import *
 
+def draw_ci (cX, cY, radius, color, win):
+    circle = Circle(Point(cX, cY), radius)
+    circle.setFill(color)
+    circle.draw(win)
+    
 bullWin = GraphWin("bullsEyes.py", 500, 500)
 bullWin.setCoords(0, 0, 500, 500)
 
-circle = Circle(Point(250, 250), 30)
-circle.setFill("green")
-circle.draw(bullWin)
+draw_ci (250, 250, 50, "black", bullWin)
 
